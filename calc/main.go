@@ -239,13 +239,18 @@ func calcAndInsert() {
 	employmentinshulanceAmount := paymentTotalAmount * 3 / 1000
 	insert(employmentinshulanceInput, employmentinshulanceAmount)
 
-	//健康保険の金額
+	//扶養人数
 	supportnumber := convert(supportInput)
-	beforeincomeAmout := convert(beforeincomeInput)
+	var healthinsuranceAmout int
 
-	familynumber := supportnumber + 1
-	healthinsuranceAmout := tax.CalcHealthInsurance(beforeincomeAmout, familynumber)
-	insert(healthinsuranceInput, healthinsuranceAmout)
+	//健康保険の金額 前年度所得が入力されていることが処理の条件
+	if len(beforeincomeInput.Text()) > 0 {
+		beforeincomeAmout := convert(beforeincomeInput)
+
+		//第二引数の計算は扶養人数 + 1にする
+		healthinsuranceAmout = tax.CalcHealthInsurance(beforeincomeAmout, (supportnumber + 1))
+		insert(healthinsuranceInput, healthinsuranceAmout)
+	}
 
 	//介護保険の計算
 	carenumber := convert(ageInput)
@@ -260,7 +265,6 @@ func calcAndInsert() {
 	insert(socialinsulancesumInput, socialinsulancesumAmount)
 
 	//所得（給与ー社会保険合計）
-
 	incomeAmout := salalyAmount - socialinsulancesumAmount
 
 	kouorotuIndex := kouorotuBox.CurrentIndex()
