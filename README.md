@@ -1,4 +1,5 @@
-## 京都府版飲食関係給与明細計算機
+## 京都府版飲食関係給与明細計算機<br>
+![サンプル画像](https://github.com/ryoko-saito/payslip_on_restaurant_biz/blob/master/img/payslip_calc.jpg)
 <br><br>
 **Go言語のインストール(Windows機のみ)**<br>
 [WindowsでGo言語 - saitodev.co](https://saitodev.co/article/1569)
