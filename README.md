@@ -9,7 +9,7 @@
 <br><br>
 ```
 # 事前に税や保険の計算用のパッケージ取得する
-go get github.com/ryoko-saito/tax_withholding
+go get github.com/ryoko-saito/tax_withholding/tax
 cd サンプルコードのクローンを配置したいディレクトリ
 git clone https://github.com/ryoko-saito/payslip_on_restaurant_biz.git
 cd payslip_on_restaurant_biz
