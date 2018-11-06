@@ -1,11 +1,11 @@
-## 京都府の飲食関係給与明細計算機<br>
+# 京都府の飲食関係給与明細計算機<br>
 ![サンプル画像](https://github.com/ryoko-saito/payslip_on_restaurant_biz/blob/master/img/payslip_calc.jpg)
 <br><br>
 京都府で飲食を営んでいて、京都府料理業組合連合会の保険に加入している方向けの給与明細を作成しました。<br>
 ※甲か乙か、従たる給与についての扶養控除などの申告書を提出しているかどうか、40歳以上の扶養人数などで保険料や所得税が変ってくるので、各項目は必ず入力して下さい。<br>
 ※賞与が発生する場合は、前月の給与（社会保険などの金額を控除したもの）を必ず入力して下さい。
 <br><br>
-# 使い方<br>
+## 使い方<br>
 **Go言語のインストール(Windows機のみ)**<br>
 [WindowsでGo言語 - saitodev.co](https://saitodev.co/article/1569)
 <br><br>
@@ -21,7 +21,7 @@ git clone https://github.com/ryoko-saito/payslip_on_restaurant_biz.git
 cd payslip_on_restaurant_biz
 qtdeploy test desktop ./calc
 ```
-# 注釈<br>
+## 注釈<br>
 所得税の計算は、給与所得の源泉徴収税額表（平成30年分）から値を入力しました。<br>
 賞与の計算は、賞与に対する源泉徴収税額の算出率の表（平成30年分）から値を入力しました。<br>
 ※前月中の給与等の金額がない場合や、前月中の給与等の金額が前月中の社会保険料等の金額以下である場合、
