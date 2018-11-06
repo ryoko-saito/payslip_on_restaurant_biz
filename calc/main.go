@@ -31,7 +31,6 @@ var netpaymentsInput *widgets.QLineEdit
 
 //var municipaltaxInput *widgets.QLineEdit
 var lastInput *widgets.QLineEdit
-var netpaymentsInput *widgets.QLineEdit
 
 func main() {
 
@@ -243,6 +242,7 @@ func calcAndInsert() {
 	//健康保険の金額
 	supportnumber := convert(supportInput)
 	beforeincomeAmout := convert(beforeincomeInput)
+
 	familynumber := supportnumber + 1
 	healthinsuranceAmout := tax.CalcHealthInsurance(beforeincomeAmout, familynumber)
 	insert(healthinsuranceInput, healthinsuranceAmout)
@@ -279,12 +279,12 @@ func calcAndInsert() {
 	insert(incometaxInput, incometaxAmount)
 
 	//控除合計の計算
-	deductionAmount := incomeAmount
+	deductionAmount := incometaxAmount
 	insert(deductionInput, deductionAmount)
 
 	//差し引き支給額の計算
 	netpaymentsAmount := paymentTotalAmount - socialinsulancesumAmount - deductionAmount
-	insert(netpaymentsAmountInput, netpaymentsAmountAmount)
+	insert(netpaymentsInput, netpaymentsAmount)
 }
 
 func convert(e *widgets.QLineEdit) int {
