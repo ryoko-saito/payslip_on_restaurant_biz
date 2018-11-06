@@ -1,4 +1,4 @@
-## 京都版飲食関係給与明細計算機
+## 京都府版飲食関係給与明細計算機
 <br><br>
 **Go言語のインストール(Windows機のみ)**<br>
 [WindowsでGo言語 - saitodev.co](https://saitodev.co/article/1569)
