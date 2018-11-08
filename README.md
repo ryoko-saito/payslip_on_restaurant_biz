@@ -29,4 +29,7 @@ qtdeploy test desktop ./calc
 金額から前月中の社会保険料等の金額を控除した金額の10倍に相当する金額を超える場合には、別途月額表を使って税額を計算してください。<br>
 健康保険料は、京都府料理業組合連合会（<a href="http://www.kyo-ryoinren.com/index.htm">http://www.kyo-ryoinren.com</a>）の保険料をもとに算出しています。
 前年度の住民税が非課税世帯の場合は、このアプリで健康保険料は算出できません。前年度課税世帯のみを対象としています。
+<br><br>
+## 今回のアプリを開発する当たってQtの調査をまとめたリポジトリ<br>
+[https://github.com/ryoko-saito/qt_on_golang](https://github.com/ryoko-saito/qt_on_golang)
 　
